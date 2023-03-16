@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Mapper\DBModelMapperBase.cs" />
     <Compile Include="Mapper\Parameters\DocumentTypeRepositoryMapper.cs" />
+    <Compile Include="Mapper\Parameters\PersonRepositoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
