@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="DBModels\Parameters\DocumentTypeDBModel.cs" />
     <Compile Include="DBModels\Parameters\PersonDBModel.cs" />
+    <Compile Include="DBModels\Parameters\TransportTypeDBModel.cs" />
+    <Compile Include="DBModels\Parameters\VehicleDBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
