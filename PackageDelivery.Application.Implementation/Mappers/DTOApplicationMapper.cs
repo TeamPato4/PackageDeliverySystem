@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace PackageDelivery.Application.Implementation.Mappers
+﻿namespace PackageDelivery.Application.Implementation.Mappers
 {
+    using System.Collections.Generic;
     public abstract class DTOApplicationMapper<DTOBaseType, ApplicationBaseType>
     {
         public abstract ApplicationBaseType DTOToApplicationlMapper(DTOBaseType input);

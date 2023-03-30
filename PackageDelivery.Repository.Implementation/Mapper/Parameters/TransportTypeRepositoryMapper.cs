@@ -1,13 +1,8 @@
-﻿using PackageDelivery.Repository.Contracts.DBModels.Parameters;
-using PackageDelivery.Repository.Implementation.DataModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
+﻿namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
 {
+    using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+    using PackageDelivery.Repository.Implementation.DataModel;
+    using System.Collections.Generic;
     public class TransportTypeRepositoryMapper : DBModelMapperBase<TransportTypeDBModel, tipoTransporte>
     {
         public override TransportTypeDBModel DatabaseToDBModelMapper(tipoTransporte input)

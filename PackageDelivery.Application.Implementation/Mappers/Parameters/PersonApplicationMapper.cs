@@ -1,9 +1,8 @@
-﻿using PackageDelivery.Application.Contracts.DTO;
-using PackageDelivery.Repository.Contracts.DBModels.Parameters;
-using System.Collections.Generic;
-
-namespace PackageDelivery.Application.Implementation.Mappers.Parameters
+﻿namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
+    using PackageDelivery.Application.Contracts.DTO;
+    using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+    using System.Collections.Generic;
     public class PersonApplicationMapper : DTOApplicationMapper<PersonDTO, PersonDBModel>
     {
         public override PersonDTO ApplicationlToDTOMapper(PersonDBModel input)

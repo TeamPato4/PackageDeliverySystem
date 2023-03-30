@@ -1,13 +1,8 @@
-﻿using PackageDelivery.Application.Contracts.DTO;
-using PackageDelivery.Repository.Contracts.DBModels.Parameters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PackageDelivery.Application.Implementation.Mappers.Parameters
+﻿namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
+    using PackageDelivery.Application.Contracts.DTO;
+    using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+    using System.Collections.Generic;
     public class DocumentTypeApplicationMapper : DTOApplicationMapper<DocumentTypeDTO, DocumentTypeDBModel>
     {
         public override DocumentTypeDTO ApplicationlToDTOMapper(DocumentTypeDBModel input)
@@ -48,5 +43,4 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             return list;
         }
     }
-
 }
