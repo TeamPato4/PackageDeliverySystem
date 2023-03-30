@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBModels\Parameters\DeliveryDBModel.cs" />
+    <Compile Include="DBModels\Parameters\DeliveryStateDBModel.cs" />
     <Compile Include="DBModels\Parameters\AddressDBModel.cs" />
     <Compile Include="DBModels\Parameters\DepartmentDBModel.cs" />
     <Compile Include="DBModels\Parameters\DocumentTypeDBModel.cs" />
+    <Compile Include="DBModels\Parameters\HistoryDBModel.cs" />
     <Compile Include="DBModels\Parameters\OfficeDBModel.cs" />
     <Compile Include="DBModels\Parameters\PackageDBModel.cs" />
     <Compile Include="DBModels\Parameters\TownDBModel.cs" />
