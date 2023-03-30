@@ -111,7 +111,10 @@
     <Compile Include="Mapper\Parameters\AddressRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\DepartmentRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\DocumentTypeRepositoryMapper.cs" />
+    <Compile Include="Mapper\Parameters\OfficeRepositoryMapper.cs" />
+    <Compile Include="Mapper\Parameters\PackageRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\PersonRepositoryMapper.cs" />
+    <Compile Include="Mapper\Parameters\TownRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\WarehouseRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\TransportTypeRepositoryMapper.cs" />
     <Compile Include="Mapper\Parameters\VehicleRepositoryMapper.cs" />
