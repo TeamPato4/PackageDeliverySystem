@@ -21,8 +21,8 @@ namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
                 SecondLastname = input.segundoApellido,
                 IdentificationType = input.idTipoDocumento,
                 IdentificationNumber = input.documento,
-                cellphone = input.telefono,
-                email = input.correo,
+                Cellphone = input.telefono,
+                Email = input.correo,
             };
         }
 
@@ -47,8 +47,8 @@ namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
                 segundoApellido = input.SecondLastname,
                 idTipoDocumento = input.IdentificationType,
                 documento = input.IdentificationNumber,
-                telefono = input.cellphone,
-                correo = input.email,
+                telefono = input.Cellphone,
+                correo = input.Email,
             };
         }
 

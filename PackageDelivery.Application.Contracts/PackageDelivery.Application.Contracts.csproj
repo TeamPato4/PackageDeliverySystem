@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Parameters\AddressDTO.cs" />
+    <Compile Include="DTO\Parameters\DepartmentDTO.cs" />
+    <Compile Include="DTO\Parameters\DocumentTypeDTO.cs" />
+    <Compile Include="DTO\Parameters\PersonDTO.cs" />
+    <Compile Include="DTO\Parameters\WarehouseDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
