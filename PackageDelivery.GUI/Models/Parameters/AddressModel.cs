@@ -23,6 +23,7 @@ namespace PackageDelivery.GUI.Models.Parameters
         [DisplayName("Barrio")]
         public string Neighborhood { get; set; }
 
+        [Required]
         [DisplayName("Observaciones")]
         public string Observations { get; set; }
 
@@ -30,7 +31,6 @@ namespace PackageDelivery.GUI.Models.Parameters
         [DisplayName("Actual")]
         public bool Current { get; set; }
 
-        [Required]
         [DisplayName("Municipio")]
         public long? IdTown { get; set; }
 

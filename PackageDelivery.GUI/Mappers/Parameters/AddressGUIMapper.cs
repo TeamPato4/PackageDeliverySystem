@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Mappers.Parameters
 {
-    public class AddressGUIMapper : ModelMapperBase<AddressModel, AddressDTO>
+    public class AddressGUIMapper : ModelMapperBase<AddressModel, AddresDTO>
     {
-        public override AddressModel DTOToModelMapper(AddressDTO input)
+        public override AddressModel DTOToModelMapper(AddresDTO input)
         {
             return new AddressModel()
             {
@@ -22,7 +22,7 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             };
         }
 
-        public override IEnumerable<AddressModel> DTOToModelMapper(IEnumerable<AddressDTO> input)
+        public override IEnumerable<AddressModel> DTOToModelMapper(IEnumerable<AddresDTO> input)
         {
             IList<AddressModel> list = new List<AddressModel>();
             foreach (var item in input)
@@ -32,9 +32,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             return list;
         }
 
-        public override AddressDTO ModelToDTOMapper(AddressModel input)
+        public override AddresDTO ModelToDTOMapper(AddressModel input)
         {
-            return new AddressDTO
+            return new AddresDTO
             {
                 Id = input.Id,
                 StreetType = input.StreetType,
@@ -48,9 +48,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             };
         }
 
-        public override IEnumerable<AddressDTO> ModelToDTOMapper(IEnumerable<AddressModel> input)
+        public override IEnumerable<AddresDTO> ModelToDTOMapper(IEnumerable<AddressModel> input)
         {
-            IList<AddressDTO> list = new List<AddressDTO>();
+            IList<AddresDTO> list = new List<AddresDTO>();
             foreach (var item in input)
             {
                 list.Add(this.ModelToDTOMapper(item));

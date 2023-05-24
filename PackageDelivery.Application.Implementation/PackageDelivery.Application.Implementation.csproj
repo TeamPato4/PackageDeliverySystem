@@ -43,9 +43,17 @@
   <ItemGroup>
     <Compile Include="Mappers\DTOMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\DeliveryApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\DeliveryStateApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\DepartmentApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\DocumentTypeApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\HistoryApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\OfficeApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\PackageApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\PersonApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\TownApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\TransportTypeApplicationMapper.cs" />
+    <Compile Include="Mappers\Parameters\VehicleApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\WarehouseApplicationMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
