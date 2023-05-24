@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PackageDelivery.GUI.Mapper
+namespace PackageDelivery.GUI.Mappers
 {
     public abstract class ModelMapperBase<ModelType, DTOType>
     {

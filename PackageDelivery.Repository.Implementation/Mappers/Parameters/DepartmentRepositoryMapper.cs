@@ -1,8 +1,8 @@
-﻿using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+﻿using PackageDelivery.Repository.DBModels.Parameters;
 using PackageDelivery.Repository.Implementation.DataModel;
 using System.Collections.Generic;
 
-namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
+namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
 {
     public class DepartmentRepositoryMapper : DBModelMapperBase<DepartmentDBModel, departamento>
     {

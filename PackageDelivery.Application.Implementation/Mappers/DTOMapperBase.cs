@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PackageDelivery.Application.Implementation.Mapper
+namespace PackageDelivery.Application.Implementation.Mappers
 {
     public abstract class DTOMapperBase<DTOType, DBModelType>
     {

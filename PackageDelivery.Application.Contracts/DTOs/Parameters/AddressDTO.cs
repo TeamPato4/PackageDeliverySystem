@@ -1,4 +1,4 @@
-﻿namespace PackageDelivery.Application.Contracts.DTO.Parameters
+﻿namespace PackageDelivery.Application.DTOs.Parameters
 {
     public class AddressDTO
     {

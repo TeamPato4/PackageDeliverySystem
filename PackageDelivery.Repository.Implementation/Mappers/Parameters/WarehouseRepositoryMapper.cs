@@ -1,4 +1,4 @@
-﻿using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+﻿using PackageDelivery.Repository.DBModels.Parameters;
 using PackageDelivery.Repository.Implementation.DataModel;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
+namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
 {
     public class WarehouseRepositoryMapper : DBModelMapperBase<WarehouseDBModel, bodega>
     {

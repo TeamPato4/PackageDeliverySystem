@@ -107,12 +107,12 @@
     <Compile Include="DataModel\vehiculo.cs">
       <DependentUpon>PackageDeliveryDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\DBModelMapperBase.cs" />
-    <Compile Include="Mapper\Parameters\AddressRepositoryMapper.cs" />
-    <Compile Include="Mapper\Parameters\DepartmentRepositoryMapper.cs" />
-    <Compile Include="Mapper\Parameters\DocumentTypeRepositoryMapper.cs" />
-    <Compile Include="Mapper\Parameters\PersonRepositoryMapper.cs" />
-    <Compile Include="Mapper\Parameters\WarehouseRepositoryMapper.cs" />
+    <Compile Include="Mappers\DBModelMapperBase.cs" />
+    <Compile Include="Mappers\Parameters\AddressRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DepartmentRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DocumentTypeRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\PersonRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\WarehouseRepositoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

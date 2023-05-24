@@ -1,8 +1,8 @@
 ﻿using PackageDelivery.GUI.Models.Parameters;
-using PackageDelivery.Application.Contracts.DTO.Parameters;
+using PackageDelivery.Application.DTOs.Parameters;
 using System.Collections.Generic;
 
-namespace PackageDelivery.GUI.Mapper.Parameters
+namespace PackageDelivery.GUI.Mappers.Parameters
 {
     public class WarehouseGUIMapper : ModelMapperBase<WarehouseModel, WarehouseDTO>
     {

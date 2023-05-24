@@ -174,12 +174,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\ModelMapperBase.cs" />
-    <Compile Include="Mapper\Parameters\AddressGUIMapper.cs" />
-    <Compile Include="Mapper\Parameters\DepartmentGUIMapper.cs" />
-    <Compile Include="Mapper\Parameters\DocumentTypeGUIMapper.cs" />
-    <Compile Include="Mapper\Parameters\PersonGUIMapper.cs" />
-    <Compile Include="Mapper\Parameters\WarehouseGUIMapper.cs" />
+    <Compile Include="Mappers\ModelMapperBase.cs" />
+    <Compile Include="Mappers\Parameters\AddressGUIMapper.cs" />
+    <Compile Include="Mappers\Parameters\DepartmentGUIMapper.cs" />
+    <Compile Include="Mappers\Parameters\DocumentTypeGUIMapper.cs" />
+    <Compile Include="Mappers\Parameters\PersonGUIMapper.cs" />
+    <Compile Include="Mappers\Parameters\WarehouseGUIMapper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

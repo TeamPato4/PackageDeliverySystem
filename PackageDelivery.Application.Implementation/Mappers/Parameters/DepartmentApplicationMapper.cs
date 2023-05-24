@@ -1,8 +1,8 @@
-﻿using PackageDelivery.Application.Contracts.DTO.Parameters;
-using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+﻿using PackageDelivery.Application.DTOs.Parameters;
+using PackageDelivery.Repository.DBModels.Parameters;
 using System.Collections.Generic;
 
-namespace PackageDelivery.Application.Implementation.Mapper.Parameters
+namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
     public class DepartmentApplicationMapper : DTOMapperBase<DepartmentDTO, DepartmentDBModel>
     {

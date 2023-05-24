@@ -1,4 +1,4 @@
-﻿namespace PackageDelivery.Repository.Contracts.DBModels.Parameters
+﻿namespace PackageDelivery.Repository.DBModels.Parameters
 {
     public class DepartmentDBModel
     {

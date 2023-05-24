@@ -1,38 +1,12 @@
-﻿using PackageDelivery.GUI.Models.Parameters;
-using PackageDelivery.Application.Contracts.DTO.Parameters;
+﻿using PackageDelivery.Application.DTOs.Parameters;
+using PackageDelivery.Repository.DBModels.Parameters;
 using System.Collections.Generic;
 
-namespace PackageDelivery.GUI.Mapper.Parameters
+namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
-    public class PersonGUIapper : ModelMapperBase<PersonModel, PersonDTO>
+    public class PersonApplicationapper : DTOMapperBase<PersonDTO, PersonDBModel>
     {
-        public override PersonModel DTOToModelMapper(PersonDTO input)
-        {
-            return new PersonModel
-            {
-                Id = input.Id,
-                FirstName = input.FirstName,
-                OtherNames = input.OtherNames,
-                FirstLastname = input.FirstLastname,
-                SecondLastname = input.SecondLastname,
-                IdentificationType = input.IdentificationType,
-                IdentificationNumber = input.IdentificationNumber,
-                Cellphone = input.Cellphone,
-                Email = input.Email
-            };
-        }
-
-        public override IEnumerable<PersonModel> DTOToModelMapper(IEnumerable<PersonDTO> input)
-        {
-            IList<PersonModel> list = new List<PersonModel>();
-            foreach (var item in input)
-            {
-                list.Add(this.DTOToModelMapper(item));
-            }
-            return list;
-        }
-
-        public override PersonDTO ModelToDTOMapper(PersonModel input)
+        public override PersonDTO DBModelToDTOMapper(PersonDBModel input)
         {
             return new PersonDTO
             {
@@ -48,12 +22,38 @@ namespace PackageDelivery.GUI.Mapper.Parameters
             };
         }
 
-        public override IEnumerable<PersonDTO> ModelToDTOMapper(IEnumerable<PersonModel> input)
+        public override IEnumerable<PersonDTO> DBModelToDTOMapper(IEnumerable<PersonDBModel> input)
         {
             IList<PersonDTO> list = new List<PersonDTO>();
             foreach (var item in input)
             {
-                list.Add(this.ModelToDTOMapper(item));
+                list.Add(this.DBModelToDTOMapper(item));
+            }
+            return list;
+        }
+
+        public override PersonDBModel DTOToDBModelMapper(PersonDTO input)
+        {
+            return new PersonDBModel
+            {
+                Id = input.Id,
+                FirstName = input.FirstName,
+                OtherNames = input.OtherNames,
+                FirstLastname = input.FirstLastname,
+                SecondLastname = input.SecondLastname,
+                IdentificationType = input.IdentificationType,
+                IdentificationNumber = input.IdentificationNumber,
+                Cellphone = input.Cellphone,
+                Email = input.Email
+            };
+        }
+
+        public override IEnumerable<PersonDBModel> DTOToDBModelMapper(IEnumerable<PersonDTO> input)
+        {
+            IList<PersonDBModel> list = new List<PersonDBModel>();
+            foreach (var item in input)
+            {
+                list.Add(this.DTOToDBModelMapper(item));
             }
             return list;
         }

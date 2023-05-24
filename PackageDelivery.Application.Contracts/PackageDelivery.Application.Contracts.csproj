@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\Parameters\AddressDTO.cs" />
-    <Compile Include="DTO\Parameters\DepartmentDTO.cs" />
-    <Compile Include="DTO\Parameters\DocumentTypeDTO.cs" />
-    <Compile Include="DTO\Parameters\PersonDTO.cs" />
-    <Compile Include="DTO\Parameters\WarehouseDTO.cs" />
+    <Compile Include="DTOs\Parameters\AddressDTO.cs" />
+    <Compile Include="DTOs\Parameters\DepartmentDTO.cs" />
+    <Compile Include="DTOs\Parameters\DocumentTypeDTO.cs" />
+    <Compile Include="DTOs\Parameters\PersonDTO.cs" />
+    <Compile Include="DTOs\Parameters\WarehouseDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
