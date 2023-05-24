@@ -1,4 +1,4 @@
-﻿using PackageDelivery.Repository.Contracts.DBModels.Parameters;
+﻿using PackageDelivery.Repository.DBModels.Parameters;
 using PackageDelivery.Repository.Implementation.DataModel;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
+namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
 {
     public class PersonRepositoryMapper : DBModelMapperBase<PersonDBModel, persona>
     {
@@ -21,8 +21,8 @@ namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
                 SecondLastname = input.segundoApellido,
                 IdentificationType = input.idTipoDocumento,
                 IdentificationNumber = input.documento,
-                cellphone = input.telefono,
-                email = input.correo,
+                Cellphone = input.telefono,
+                Email = input.correo,
             };
         }
 
@@ -47,8 +47,8 @@ namespace PackageDelivery.Repository.Implementation.Mapper.Parameters
                 segundoApellido = input.SecondLastname,
                 idTipoDocumento = input.IdentificationType,
                 documento = input.IdentificationNumber,
-                telefono = input.cellphone,
-                correo = input.email,
+                telefono = input.Cellphone,
+                correo = input.Email,
             };
         }
 

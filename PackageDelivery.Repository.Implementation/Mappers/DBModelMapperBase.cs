@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PackageDelivery.Repository.Implementation.Mapper
+namespace PackageDelivery.Repository.Implementation.Mappers
 {
     public abstract class DBModelMapperBase<DbModelType, DatabaseType>
     {

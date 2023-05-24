@@ -41,7 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Parameters\AddressDTO.cs" />
+    <Compile Include="DTOs\Parameters\DeliveryDTO.cs" />
+    <Compile Include="DTOs\Parameters\DeliveryStateDTO.cs" />
+    <Compile Include="DTOs\Parameters\DepartmentDTO.cs" />
+    <Compile Include="DTOs\Parameters\DocumentTypeDTO.cs" />
+    <Compile Include="DTOs\Parameters\HistoryDTO.cs" />
+    <Compile Include="DTOs\Parameters\OfficeDTO.cs" />
+    <Compile Include="DTOs\Parameters\PackageDTO.cs" />
+    <Compile Include="DTOs\Parameters\PersonDTO.cs" />
+    <Compile Include="DTOs\Parameters\TownDTO.cs" />
+    <Compile Include="DTOs\Parameters\TransportTypeDTO.cs" />
+    <Compile Include="DTOs\Parameters\VehicleDTO.cs" />
+    <Compile Include="DTOs\Parameters\WarehouseDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

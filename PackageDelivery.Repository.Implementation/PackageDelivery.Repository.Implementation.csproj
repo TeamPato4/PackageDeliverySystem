@@ -107,9 +107,20 @@
     <Compile Include="DataModel\vehiculo.cs">
       <DependentUpon>PackageDeliveryDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\DBModelMapperBase.cs" />
-    <Compile Include="Mapper\Parameters\DocumentTypeRepositoryMapper.cs" />
-    <Compile Include="Mapper\Parameters\PersonRepositoryMapper.cs" />
+    <Compile Include="Mappers\DBModelMapperBase.cs" />
+    <Compile Include="Mappers\Parameters\AddressRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DeliveryRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DeliveryStateRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DepartmentRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\DocumentTypeRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\HistoryRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\OfficeRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\PackageRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\PersonRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\TownRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\TransportTypeRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\VehicleRepositoryMapper.cs" />
+    <Compile Include="Mappers\Parameters\WarehouseRepositoryMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
