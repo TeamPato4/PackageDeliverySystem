@@ -9,7 +9,7 @@ namespace PackageDelivery.GUI.Models.Parameters
 
         [Required]
         [DisplayName("Placa")]
-        public string Plate { get; set; }
+        public string Placa { get; set; }
 
         [Required]
         [DisplayName("Tipo de transporte")]

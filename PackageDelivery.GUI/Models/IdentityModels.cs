@@ -29,5 +29,8 @@ namespace PackageDelivery.GUI.Models
             return new ApplicationDbContext();
         }
     public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.DocumentTypeModel> DocumentTypeModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.TransportTypeModel> TransportTypeModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.VehicleModel> VehicleModels { get; set; }
     }
+    
 }
