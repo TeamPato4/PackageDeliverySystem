@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Mappers.Parameters
 {
-    public class PersonGUIapper : ModelMapperBase<PersonModel, PersonDTO>
+    public class PersonGUIMapper : ModelMapperBase<PersonModel, PersonDTO>
     {
         public override PersonModel DTOToModelMapper(PersonDTO input)
         {

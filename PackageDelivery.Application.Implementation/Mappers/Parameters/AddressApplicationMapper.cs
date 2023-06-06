@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
-    public class AddressApplicationMapper : DTOMapperBase<AddresDTO, AddressDBModel>
+    public class AddressApplicationMapper : DTOMapperBase<AddressDTO, AddressDBModel>
     {
-        public override AddresDTO DBModelToDTOMapper(AddressDBModel input)
+        public override AddressDTO DBModelToDTOMapper(AddressDBModel input)
         {
-            return new AddresDTO()
+            return new AddressDTO()
             {
                 Id = input.Id,
                 StreetType = input.StreetType,
@@ -22,9 +22,9 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             };
         }
 
-        public override IEnumerable<AddresDTO> DBModelToDTOMapper(IEnumerable<AddressDBModel> input)
+        public override IEnumerable<AddressDTO> DBModelToDTOMapper(IEnumerable<AddressDBModel> input)
         {
-            IList<AddresDTO> list = new List<AddresDTO>();
+            IList<AddressDTO> list = new List<AddressDTO>();
             foreach (var item in input)
             {
                 list.Add(this.DBModelToDTOMapper(item));
@@ -32,7 +32,7 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             return list;
         }
 
-        public override AddressDBModel DTOToDBModelMapper(AddresDTO input)
+        public override AddressDBModel DTOToDBModelMapper(AddressDTO input)
         {
             return new AddressDBModel
             {
@@ -48,7 +48,7 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             };
         }
 
-        public override IEnumerable<AddressDBModel> DTOToDBModelMapper(IEnumerable<AddresDTO> input)
+        public override IEnumerable<AddressDBModel> DTOToDBModelMapper(IEnumerable<AddressDTO> input)
         {
             IList<AddressDBModel> list = new List<AddressDBModel>();
             foreach (var item in input)

@@ -1,10 +1,6 @@
 ﻿using PackageDelivery.Repository.DBModels.Parameters;
 using PackageDelivery.Repository.Implementation.DataModel;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
 {
@@ -39,11 +35,11 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
             return new bodega
             {
                 id = input.Id,
-                nombre = input.Name,
-                codigo = input.Code,
-                direccion = input.Address,
-                latitud = input.Latitude,
-                longitud = input.Longitude,
+                nombre = input.Name.Trim(),
+                codigo = input.Code.Trim(),
+                direccion = input.Address.Trim(),
+                latitud = input.Latitude.Trim(),
+                longitud = input.Longitude.Trim(),
                 idMunicipio = input.IdTown
             };
         }

@@ -1,6 +1,6 @@
 ﻿namespace PackageDelivery.Application.DTOs.Parameters
 {
-    public class AddresDTO
+    public class AddressDTO
     {
         public long Id { get; set; }
         public string StreetType { get; set; }
