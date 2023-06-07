@@ -16,7 +16,8 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Address = input.direccion,
                 Latitude = input.latitud,
                 Longitude = input.longitud,
-                IdTown = input.idMunicipio
+                IdTown = input.idMunicipio,
+                TownName = input.municipio.nombre,
             };
         }
 

@@ -47,7 +47,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Warehouse/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] WarehouseModel warehouseModel)
+        public ActionResult Create([Bind(Include = "Id,Name,Code,Address,Latitude,Longitude,IdTown")] WarehouseModel warehouseModel)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Warehouse/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] WarehouseModel warehouseModel)
+        public ActionResult Edit([Bind(Include = "Id,Name,Code,Address,Latitude,Longitude,IdTown")] WarehouseModel warehouseModel)
         {
             if (ModelState.IsValid)
             {

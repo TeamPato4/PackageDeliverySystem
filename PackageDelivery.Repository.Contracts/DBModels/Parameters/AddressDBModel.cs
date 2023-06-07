@@ -11,5 +11,7 @@
         public bool Current { get; set; }
         public long? IdTown { get; set; }
         public long IdPerson { get; set; }
+        public string TownName { get; set; }
+        public string PersonName { get; set; }
     }
 }

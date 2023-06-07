@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class PersonController : Controller
     {
         private IPersonApplication _app = new PersonImpApplication();
+        private IDocumentTypeApplication _dtApp = new DocumentTypeImpApplication();
 
         // GET: Person
         public ActionResult Index(string filter = "")
@@ -41,13 +42,19 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Person/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<DocumentTypeDTO> dtlist = this._dtApp.getRecordsList(string.Empty);
+            DocumentTypeGUIMapper mapper = new DocumentTypeGUIMapper();
+            PersonModel model = new PersonModel()
+            {
+                DocumentTypeList = mapper.DTOToModelMapper(dtlist),
+            };
+            return View(model);
         }
 
         // POST: Person/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] PersonModel personModel)
+        public ActionResult Create([Bind(Include = "Id,FirstName,OtherNames,FirstLastname,SecondLastname,IdentificationNumber,Cellphone,Email,IdentificationType")] PersonModel personModel)
         {
             if (ModelState.IsValid)
             {
@@ -77,6 +84,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             PersonGUIMapper mapper = new PersonGUIMapper();
             PersonModel personModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<DocumentTypeDTO> dtList = this._dtApp.getRecordsList(string.Empty);
+            DocumentTypeGUIMapper dtMapper = new DocumentTypeGUIMapper();
+
+            personModel.DocumentTypeList = dtMapper.DTOToModelMapper(dtList);
+
             if (personModel == null)
             {
                 return HttpNotFound();
@@ -87,7 +99,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Person/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] PersonModel personModel)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,OtherNames,FirstLastname,SecondLastname,IdentificationNumber,Cellphone,Email,IdentificationType")] PersonModel personModel)
         {
             if (ModelState.IsValid)
             {

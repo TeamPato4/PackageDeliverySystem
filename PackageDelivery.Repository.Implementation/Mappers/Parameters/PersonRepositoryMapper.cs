@@ -19,6 +19,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 IdentificationNumber = input.documento,
                 Cellphone = input.telefono,
                 Email = input.correo,
+                DocumentTypeName = input.tipoDocumento1.nombre,
             };
         }
 

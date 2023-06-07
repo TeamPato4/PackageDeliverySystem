@@ -22,8 +22,10 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 }
                 PersonRepositoryMapper mapper = new PersonRepositoryMapper();
                 persona dt = mapper.DBModelToDatabaseMapper(record);
+                dt.tipoDocumento = " ";
                 db.persona.Add(dt);
                 db.SaveChanges();
+                dt.tipoDocumento1 = new tipoDocumento() {nombre = record.DocumentTypeName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }
@@ -108,6 +110,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                     td.telefono = record.Cellphone;
                     td.correo = record.Email;
                     td.idTipoDocumento = record.IdentificationType;
+                    td.tipoDocumento = " ";
 
                     db.Entry(td).State = EntityState.Modified;
                     db.SaveChanges();

@@ -18,7 +18,9 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Observations = input.observaciones,
                 Current = input.actual,
                 IdTown = input.idMunicipio,
-                IdPerson = input.idPersona
+                IdPerson = input.idPersona,
+                TownName = input.municipio.nombre,
+                PersonName = input.persona1.primerNombre,
             };
         }
 

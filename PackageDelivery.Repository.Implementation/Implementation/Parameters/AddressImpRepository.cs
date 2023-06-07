@@ -24,6 +24,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 direccion dt = mapper.DBModelToDatabaseMapper(record);
                 db.direccion.Add(dt);
                 db.SaveChanges();
+                dt.persona1 = new persona() { primerNombre = record.PersonName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }

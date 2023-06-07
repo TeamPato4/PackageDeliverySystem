@@ -18,7 +18,9 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
                 Observations = input.Observations,
                 Current = input.Current,
                 IdTown = input.IdTown,
-                IdPerson = input.IdPerson
+                IdPerson = input.IdPerson,
+                TownName = input.TownName,
+                PersonName = input.PersonName,
             };
         }
 

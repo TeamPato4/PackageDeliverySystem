@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class AddressController : Controller
     {
         private IAddressApplication _app = new AddressImpApplication();
+        private IPersonApplication _pApp = new PersonImpApplication();
 
         // GET: Address
         public ActionResult Index(string filter = "")
@@ -41,13 +42,19 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Address/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<PersonDTO> plist = this._pApp.getRecordsList(string.Empty);
+            PersonGUIMapper mapper = new PersonGUIMapper();
+            AddressModel model = new AddressModel()
+            {
+                PersonList = mapper.DTOToModelMapper(plist),
+            };
+            return View(model);
         }
 
         // POST: Address/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] AddressModel addressModel)
+        public ActionResult Create([Bind(Include = "Id,StreetType,Number,PropertyType,Neighborhood,Observations,Current,IdTown,IdPerson")] AddressModel addressModel)
         {
             if (ModelState.IsValid)
             {
@@ -77,6 +84,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             AddressGUIMapper mapper = new AddressGUIMapper();
             AddressModel addressModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<PersonDTO> plist = this._pApp.getRecordsList(string.Empty);
+            PersonGUIMapper pMapper = new PersonGUIMapper();
+
+            addressModel.PersonList = pMapper.DTOToModelMapper(plist);
+
             if (addressModel == null)
             {
                 return HttpNotFound();
@@ -87,7 +99,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Address/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] AddressModel addressModel)
+        public ActionResult Edit([Bind(Include = "Id,StreetType,Number,PropertyType,Neighborhood,Observations,Current,IdTown,IdPerson")] AddressModel addressModel)
         {
             if (ModelState.IsValid)
             {

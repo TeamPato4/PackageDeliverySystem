@@ -16,7 +16,8 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
                 Address = input.Address,
                 Latitude = input.Latitude,
                 Longitude = input.Longitude,
-                IdTown = input.IdTown
+                IdTown = input.IdTown,
+                TownName = input.TownName,
             };
         }
 
