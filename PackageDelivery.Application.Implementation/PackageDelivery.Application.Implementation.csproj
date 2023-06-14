@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\Parameters\DeliveryImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\DeliveryStateImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\HistoryImpApplication.cs" />
     <Compile Include="Mappers\DTOMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryApplicationMapper.cs" />
@@ -68,7 +71,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementation\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
