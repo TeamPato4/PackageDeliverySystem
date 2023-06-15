@@ -4360,6 +4360,19 @@ textarea.form-control-lg {
   padding: 0;
   overflow-y: visible;
 }
+.bgblue {
+    background: rgb(9,9,121);
+    background: linear-gradient(158deg, rgba(9,9,121,1) 36%, rgba(255,215,0,1) 100%);
+    color: #fff;
+}
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+}
 
 .navbar-dark,
 .navbar[data-bs-theme=dark] {

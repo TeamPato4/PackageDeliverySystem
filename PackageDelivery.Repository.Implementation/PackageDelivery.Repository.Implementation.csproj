@@ -110,6 +110,9 @@
     <Compile Include="DataModel\vehiculo.cs">
       <DependentUpon>PackageDeliveryDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\Parameters\DeliveryImpRepository.cs" />
+    <Compile Include="Implementation\Parameters\DeliveryStateImpRepository.cs" />
+    <Compile Include="Implementation\Parameters\HistoryImpRepository.cs" />
     <Compile Include="Implementation\Parameters\TransportTypeImpRepository.cs" />
     <Compile Include="Implementation\Parameters\VehicleImpRepository.cs" />
     <Compile Include="Implementation\Parameters\OfficeImpRepository.cs" />

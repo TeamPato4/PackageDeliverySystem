@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\Parameters\DeliveryImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\DeliveryStateImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\HistoryImpApplication.cs" />
     <Compile Include="Implementation\Parameters\TransportTypeApplication.cs" />
     <Compile Include="Implementation\Parameters\VehicleApplication.cs" />
     <Compile Include="Implementation\Parameters\OfficeImpApplication.cs" />
