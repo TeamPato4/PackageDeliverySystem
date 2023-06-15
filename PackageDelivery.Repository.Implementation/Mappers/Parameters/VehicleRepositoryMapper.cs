@@ -13,6 +13,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Id = input.id,
                 Placa = input.placa,
                 IdTransportType = input.idTipoTransporte,
+                TrasportTypeName = input.tipoTransporte.nombre
             };
         }
 

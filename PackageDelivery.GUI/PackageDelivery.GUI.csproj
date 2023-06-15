@@ -195,6 +195,7 @@
     <Compile Include="Controllers\Parameters\DeliveryController.cs" />
     <Compile Include="Controllers\Parameters\DeliveryStateController.cs" />
     <Compile Include="Controllers\Parameters\HistoryController.cs" />
+    <Compile Include="Controllers\Parameters\ParametersController.cs" />
     <Compile Include="Controllers\Parameters\TransportTypeController.cs" />
     <Compile Include="Controllers\Parameters\VehicleController.cs" />
     <Compile Include="Controllers\Parameters\OfficeController.cs" />
@@ -418,6 +419,7 @@
     <Content Include="Views\Warehouse\Details.cshtml" />
     <Content Include="Views\Warehouse\Edit.cshtml" />
     <Content Include="Views\Warehouse\Index.cshtml" />
+    <Content Include="Views\Parameters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

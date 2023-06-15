@@ -19,7 +19,8 @@ namespace PackageDelivery.Repository.Implementation.Implementation.Parameters
                     vehiculo newRecord = mapper.DBModelToDatabaseMapper(record);
                     db.vehiculo.Add(newRecord);
                     db.SaveChanges();
-                    return record;
+                    newRecord.tipoTransporte = new tipoTransporte { nombre = record.TrasportTypeName };
+                    return mapper.DatabaseToDBModelMapper(newRecord);
                 }
                 catch
                 {

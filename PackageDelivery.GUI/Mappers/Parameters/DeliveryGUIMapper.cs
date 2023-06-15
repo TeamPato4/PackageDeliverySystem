@@ -17,7 +17,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
                 IdAddressDestination = input.IdAddressDestination,
                 IdPackage = input.IdPackage,
                 IdDeliveryState = input.IdDeliveryState,
-                IdTransportType = input.IdTransportType
+                IdTransportType = input.IdTransportType,
+                DeliveryStateName = input.DeliveryStateName,
+                TransportTypeName = input.TrasportTypeName
             };
         }
 

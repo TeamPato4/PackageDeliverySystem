@@ -1,5 +1,6 @@
 ﻿using PackageDelivery.Application.Contracts.Interfaces.Parameters;
 using PackageDelivery.Application.DTOs.Parameters;
+using PackageDelivery.Application.Implementation.Implementation.Parameters;
 using PackageDelivery.Application.Implementation.Parameters;
 using PackageDelivery.GUI.Helpers;
 using PackageDelivery.GUI.Mappers.Parameters;
@@ -13,9 +14,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class DeliveryController : Controller
     {
         private IDeliveryApplication _app = new DeliveryImpApplication();
+        private ITransportTypeApplication _tApp = new TransportTypeApplication();
+        private IDeliveryStateApplication _dApp = new DeliveryStateImpApplication();
 
         // GET: Delivery
-        public ActionResult Index(long filter)
+        public ActionResult Index(long filter = 0)
         {
             DeliveryGUIMapper mapper = new DeliveryGUIMapper();
             IEnumerable<DeliveryModel> list = mapper.DTOToModelMapper(_app.getRecordsList(filter));
@@ -41,7 +44,17 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Delivery/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<TransportTypeDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TransportTypeGUIMapper mapper = new TransportTypeGUIMapper();
+            IEnumerable<DeliveryStateDTO> dlist = this._dApp.getRecordsList(string.Empty);
+            DeliveryStateGUIMapper dmapper = new DeliveryStateGUIMapper();
+
+            DeliveryModel model = new DeliveryModel()
+            {
+                TransportTypeList = mapper.DTOToModelMapper(tlist),
+                DeliveryStateList = dmapper.DTOToModelMapper(dlist),
+            };
+            return View(model);
         }
 
         // POST: Delivery/Create
@@ -77,6 +90,13 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             DeliveryGUIMapper mapper = new DeliveryGUIMapper();
             DeliveryModel deliveryModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<TransportTypeDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TransportTypeGUIMapper tmapper = new TransportTypeGUIMapper();
+            IEnumerable<DeliveryStateDTO> dlist = this._dApp.getRecordsList(string.Empty);
+            DeliveryStateGUIMapper dmapper = new DeliveryStateGUIMapper();
+
+            deliveryModel.TransportTypeList = tmapper.DTOToModelMapper(tlist);
+            deliveryModel.DeliveryStateList = dmapper.DTOToModelMapper(dlist);
             if (deliveryModel == null)
             {
                 return HttpNotFound();

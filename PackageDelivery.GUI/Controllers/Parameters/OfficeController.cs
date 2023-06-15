@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class OfficeController : Controller
     {
         private IOfficeApplication _app = new OfficeImpApplication();
+        private ITownApplication _tApp = new TownImpApplication();
 
         // GET: Office
         public ActionResult Index(string filter = "")
@@ -41,13 +42,20 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Office/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
+
+            OfficeModel model = new OfficeModel()
+            {
+                TownList = tMapper.DTOToModelMapper(tlist),
+            };
+            return View(model);
         }
 
         // POST: Office/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] OfficeModel OfficeModel)
+        public ActionResult Create([Bind(Include = "Id,Name,Code,Phone,Latitude,Longitude,IdTown,Address")] OfficeModel OfficeModel)
         {
             if (ModelState.IsValid)
             {
@@ -77,6 +85,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             OfficeGUIMapper mapper = new OfficeGUIMapper();
             OfficeModel OfficeModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
+
+            OfficeModel.TownList = tMapper.DTOToModelMapper(tlist);
+
             if (OfficeModel == null)
             {
                 return HttpNotFound();
@@ -87,7 +100,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Office/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] OfficeModel OfficeModel)
+        public ActionResult Edit([Bind(Include = "Id,Name,Code,Phone,Latitude,Longitude,IdTown,Address")] OfficeModel OfficeModel)
         {
             if (ModelState.IsValid)
             {

@@ -23,13 +23,9 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 municipio dt = mapper.DBModelToDatabaseMapper(record);
                 db.municipio.Add(dt);
                 db.SaveChanges();
+                dt.departamento = new departamento { nombre = record.DepartmentName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
-        }
-
-        public DocumentTypeDBModel createRecord(DocumentTypeDBModel record)
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -104,7 +100,8 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 }
                 else
                 {
-                    td.id = record.Id;
+                    td.nombre = record.Name;
+                    td.idDepartamento = record.IdDepartment;
 
                     db.Entry(td).State = EntityState.Modified;
                     db.SaveChanges();
@@ -113,11 +110,6 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                     return mapper.DatabaseToDBModelMapper(td);
                 }
             }
-        }
-
-        public DocumentTypeDBModel updateRecord(DocumentTypeDBModel record)
-        {
-            throw new NotImplementedException();
         }
 
     }

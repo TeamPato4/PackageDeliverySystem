@@ -24,6 +24,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 bodega dt = mapper.DBModelToDatabaseMapper(record);
                 db.bodega.Add(dt);
                 db.SaveChanges();
+                dt.municipio = new municipio { nombre = record.TownName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }

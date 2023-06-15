@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class PackageController : Controller
     {
         private IPackageApplication _app = new PackageImpApplication();
+        private IOfficeApplication _oApp = new OfficeImpApplication();
 
         // GET: Package
         public ActionResult Index(long filter = 0)
@@ -41,13 +42,19 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Package/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<OfficeDTO> olist = this._oApp.getRecordsList(string.Empty);
+            OfficeGUIMapper mapper = new OfficeGUIMapper();
+            PackageModel model = new PackageModel()
+            {
+                OfficeList = mapper.DTOToModelMapper(olist),
+            };
+            return View(model);
         }
 
         // POST: Package/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] PackageModel PackageModel)
+        public ActionResult Create([Bind(Include = "Id,Weight,Height,Depth,Width,IdOffice")] PackageModel PackageModel)
         {
             if (ModelState.IsValid)
             {
@@ -77,6 +84,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             PackageGUIMapper mapper = new PackageGUIMapper();
             PackageModel PackageModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<OfficeDTO> olist = this._oApp.getRecordsList(string.Empty);
+            OfficeGUIMapper omapper = new OfficeGUIMapper();
+
+            PackageModel.OfficeList = omapper.DTOToModelMapper(olist);
+
             if (PackageModel == null)
             {
                 return HttpNotFound();
@@ -87,7 +99,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Package/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] PackageModel PackageModel)
+        public ActionResult Edit([Bind(Include = "Id,Weight,Height,Depth,Width,IdOffice")] PackageModel PackageModel)
         {
             if (ModelState.IsValid)
             {

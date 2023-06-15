@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class HistoryController : Controller
     {
         private IHistoryApplication _app = new HistoryImpApplication();
+        private IWarehouseApplication _wApp = new WarehouseImpApplication();
 
         // GET: History
         public ActionResult Index(string filter = "")
@@ -41,7 +42,13 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: History/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<WarehouseDTO> wlist = this._wApp.getRecordsList(string.Empty);
+            WarehouseGUIMapper mapper = new WarehouseGUIMapper();
+            HistoryModel model = new HistoryModel()
+            {
+                WarehouseList = mapper.DTOToModelMapper(wlist),
+            };
+            return View(model);
         }
 
         // POST: History/Create
@@ -77,6 +84,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             HistoryGUIMapper mapper = new HistoryGUIMapper();
             HistoryModel historyModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<WarehouseDTO> wlist = this._wApp.getRecordsList(string.Empty);
+            WarehouseGUIMapper wmapper = new WarehouseGUIMapper();
+
+            historyModel.WarehouseList = wmapper.DTOToModelMapper(wlist);
+
             if (historyModel == null)
             {
                 return HttpNotFound();

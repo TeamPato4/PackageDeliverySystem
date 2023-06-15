@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -25,5 +26,11 @@ namespace PackageDelivery.GUI.Models.Parameters
 
         [DisplayName("Oficina")]
         public long? IdOffice { get; set; }
+
+        [DisplayName("Oficina")]
+        public string OfficeName { get; set; }
+
+        [DisplayName("Oficina")]
+        public IEnumerable<OfficeModel> OfficeList { get; set; }
     }
 }

@@ -8,5 +8,6 @@
         public string Description { get; set; }
         public long? IdPackage { get; set; }
         public long? IdWarehouse { get; set; }
+        public string WarehouseName { get; set; }
     }
 }

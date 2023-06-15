@@ -24,6 +24,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 paquete dt = mapper.DBModelToDatabaseMapper(record);
                 db.paquete.Add(dt);
                 db.SaveChanges();
+                dt.oficina = new oficina { nombre = record.OfficeName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }
@@ -88,7 +89,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
         {
             using (MensajeriaDBEntities db = new MensajeriaDBEntities())
             {
-                IEnumerable<paquete> list = db.paquete.Where(x => x.id == filter);
+                IEnumerable<paquete> list = db.paquete.Where(x => x.id >= filter);
                 PackageRepositoryMapper mapper = new PackageRepositoryMapper();
                 return mapper.DatabaseToDBModelMapper(list);
             }

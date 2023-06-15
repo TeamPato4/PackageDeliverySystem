@@ -12,6 +12,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class VehicleController : Controller
     {
         private IVehicleApplication _app = new VehicleApplication();
+        private ITransportTypeApplication _ttApp = new TransportTypeApplication();
 
         // GET: DocumentType
         public ActionResult Index(string filter = "")
@@ -40,7 +41,13 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: DocumentType/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<TransportTypeDTO> ttlist = this._ttApp.getRecordsList(string.Empty);
+            TransportTypeGUIMapper mapper = new TransportTypeGUIMapper();
+            VehicleModel model = new VehicleModel()
+            {
+                TransportTypeList = mapper.DTOToModelMapper(ttlist),
+            };
+            return View(model);
         }
 
         // POST: DocumentType/Create
@@ -48,7 +55,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] VehicleModel vehicleModel)
+        public ActionResult Create([Bind(Include = "Id,Placa,IdTransportType")] VehicleModel vehicleModel)
         {
             if (ModelState.IsValid)
             {
@@ -73,6 +80,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             VehicleGUIMapper mapper = new VehicleGUIMapper();
             VehicleModel vehicleModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<TransportTypeDTO> ttlist = this._ttApp.getRecordsList(string.Empty);
+            TransportTypeGUIMapper ttmapper = new TransportTypeGUIMapper();
+
+            vehicleModel.TransportTypeList = ttmapper.DTOToModelMapper(ttlist);
+
             if (vehicleModel == null)
             {
                 return HttpNotFound();
@@ -85,7 +97,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] VehicleModel vehicleModel)
+        public ActionResult Edit([Bind(Include = "Id,Placa,IdTransportType")] VehicleModel vehicleModel)
         {
             if (ModelState.IsValid)
             {

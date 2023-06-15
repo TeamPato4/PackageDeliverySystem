@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class WarehouseController : Controller
     {
         private IWarehouseApplication _app = new WarehouseImpApplication();
+        private ITownApplication _tApp = new TownImpApplication();
 
         // GET: Warehouse
         public ActionResult Index(string filter = "")
@@ -41,7 +42,14 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Warehouse/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
+
+            WarehouseModel model = new WarehouseModel()
+            {
+                TownList = tMapper.DTOToModelMapper(tlist),
+            };
+            return View(model);
         }
 
         // POST: Warehouse/Create
@@ -77,6 +85,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             WarehouseGUIMapper mapper = new WarehouseGUIMapper();
             WarehouseModel warehouseModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
+
+            warehouseModel.TownList = tMapper.DTOToModelMapper(tlist);
+
             if (warehouseModel == null)
             {
                 return HttpNotFound();

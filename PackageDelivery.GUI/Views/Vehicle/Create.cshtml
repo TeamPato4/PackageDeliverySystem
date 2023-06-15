@@ -22,12 +22,11 @@
             @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.IdTransportType, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.IdTransportType, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.IdTransportType, "", new { @class = "text-danger" })
-        </div>
+    <div class="form-group col-sm-6">
+        @Html.LabelFor(model => model.IdTransportType)
+        @Html.DropDownListFor(model => model.IdTransportType, new SelectList(Model.TransportTypeList, "Id", "Name"), new { @class = "form-control chosen-select-single", @id = "selTransportType", data_placeholder = "-- Seleccione el tipo de transporte --" })
+        @Html.ValidationMessageFor(model => model.IdTransportType, "", new { @class = "text-danger" })
+
     </div>
 
     <div class="form-group">

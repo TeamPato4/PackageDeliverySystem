@@ -25,6 +25,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 db.direccion.Add(dt);
                 db.SaveChanges();
                 dt.persona1 = new persona() { primerNombre = record.PersonName };
+                dt.municipio = new municipio() { nombre = record.TownName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }

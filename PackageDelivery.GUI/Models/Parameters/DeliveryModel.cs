@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -29,5 +30,17 @@ namespace PackageDelivery.GUI.Models.Parameters
 
         [DisplayName("Tipo de transporte")]
         public long? IdTransportType { get; set; }
+
+        [DisplayName("Tipo de transporte")]
+        public string TransportTypeName { get; set; }
+
+        [DisplayName("Tipo de transporte")]
+        public IEnumerable<TransportTypeModel> TransportTypeList { get; set; }
+
+        [DisplayName("Estado del envio")]
+        public string DeliveryStateName { get; set; }
+
+        [DisplayName("Estado del envio")]
+        public IEnumerable<DeliveryStateModel> DeliveryStateList { get; set; }
     }
 }

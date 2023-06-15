@@ -13,6 +13,7 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
                 Id = input.Id,
                 Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
+                TrasportTypeName = input.TrasportTypeName,
             };
         }
         public override IEnumerable<VehicleDTO> DBModelToDTOMapper(IEnumerable<VehicleDBModel> input)

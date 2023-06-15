@@ -15,7 +15,8 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 DepartureDate = input.fechaSalida,
                 Description = input.descripcion,
                 IdPackage = input.idPaquete,
-                IdWarehouse = input.idBodega
+                IdWarehouse = input.idBodega,
+                WarehouseName = input.bodega.nombre
             };
         }
 

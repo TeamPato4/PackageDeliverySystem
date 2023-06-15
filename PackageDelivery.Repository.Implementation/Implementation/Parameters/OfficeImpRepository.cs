@@ -24,6 +24,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 oficina dt = mapper.DBModelToDatabaseMapper(record);
                 db.oficina.Add(dt);
                 db.SaveChanges();
+                dt.municipio = new municipio { nombre = record.TownName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }

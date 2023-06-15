@@ -53,10 +53,10 @@
             @Html.DisplayFor(modelItem => item.IdPackage)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IdDeliveryState)
+            @Html.DisplayFor(modelItem => item.DeliveryStateName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IdTransportType)
+            @Html.DisplayFor(modelItem => item.TransportTypeName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

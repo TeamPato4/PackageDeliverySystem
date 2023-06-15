@@ -14,6 +14,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     {
         private IAddressApplication _app = new AddressImpApplication();
         private IPersonApplication _pApp = new PersonImpApplication();
+        private ITownApplication _tApp = new TownImpApplication();
 
         // GET: Address
         public ActionResult Index(string filter = "")
@@ -44,9 +45,14 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         {
             IEnumerable<PersonDTO> plist = this._pApp.getRecordsList(string.Empty);
             PersonGUIMapper mapper = new PersonGUIMapper();
+
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
+
             AddressModel model = new AddressModel()
             {
                 PersonList = mapper.DTOToModelMapper(plist),
+                TownList = tMapper.DTOToModelMapper(tlist),
             };
             return View(model);
         }
@@ -86,8 +92,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             AddressModel addressModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
             IEnumerable<PersonDTO> plist = this._pApp.getRecordsList(string.Empty);
             PersonGUIMapper pMapper = new PersonGUIMapper();
+            IEnumerable<TownDTO> tlist = this._tApp.getRecordsList(string.Empty);
+            TownGUIMapper tMapper = new TownGUIMapper();
 
             addressModel.PersonList = pMapper.DTOToModelMapper(plist);
+            addressModel.TownList = tMapper.DTOToModelMapper(tlist);
 
             if (addressModel == null)
             {

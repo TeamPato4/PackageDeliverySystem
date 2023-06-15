@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
     public class TownController : Controller
     {
         private ITownApplication _app = new TownImpApplication();
+        private IDepartmentApplication _dApp = new DepartmentImpApplication();
 
         // GET: Town
         public ActionResult Index(string filter = "")
@@ -41,13 +42,19 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // GET: Town/Create
         public ActionResult Create()
         {
-            return View();
+            IEnumerable<DepartmentDTO> dlist = this._dApp.getRecordsList(string.Empty);
+            DepartmentGUIMapper mapper = new DepartmentGUIMapper();
+            TownModel model = new TownModel()
+            {
+                DepartmentList = mapper.DTOToModelMapper(dlist),
+            };
+            return View(model);
         }
 
         // POST: Town/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] TownModel TownModel)
+        public ActionResult Create([Bind(Include = "Id,Name,IdDepartment")] TownModel TownModel)
         {
             if (ModelState.IsValid)
             {
@@ -77,6 +84,11 @@ namespace PackageDelivery.GUI.Controllers.Parameters
             }
             TownGUIMapper mapper = new TownGUIMapper();
             TownModel TownModel = mapper.DTOToModelMapper(_app.getRecordById(id.Value));
+            IEnumerable<DepartmentDTO> dlist = this._dApp.getRecordsList(string.Empty);
+            DepartmentGUIMapper dmapper = new DepartmentGUIMapper();
+
+            TownModel.DepartmentList = dmapper.DTOToModelMapper(dlist);
+
             if (TownModel == null)
             {
                 return HttpNotFound();
@@ -87,7 +99,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         // POST: Town/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] TownModel TownModel)
+        public ActionResult Edit([Bind(Include = "Id,Name,IdDepartment")] TownModel TownModel)
         {
             if (ModelState.IsValid)
             {

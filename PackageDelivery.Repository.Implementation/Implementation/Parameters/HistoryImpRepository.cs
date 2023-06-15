@@ -24,6 +24,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 historial dt = mapper.DBModelToDatabaseMapper(record);
                 db.historial.Add(dt);
                 db.SaveChanges();
+                dt.bodega = new bodega { nombre = record.WarehouseName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }

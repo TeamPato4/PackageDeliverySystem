@@ -10,5 +10,7 @@
         public long? IdPackage { get; set; }
         public long? IdDeliveryState { get; set; }
         public long? IdTransportType { get; set; }
+        public string TrasportTypeName { get; set; }
+        public string DeliveryStateName { get; set; }
     }
 }

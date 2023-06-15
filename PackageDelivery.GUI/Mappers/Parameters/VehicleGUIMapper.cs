@@ -13,6 +13,7 @@ namespace PackageDelivery.GUI.Mappers.Parameters
                 Id = input.Id,
                 Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
+                TransportTypeName = input.TrasportTypeName
             };
         }
 

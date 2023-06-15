@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Parametros</h2>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                @Html.ActionLink("Tipo de Documento", "Index", "DocumentType", routeValues: null, htmlAttributes: new { title = "DocumentType", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Persona", "Index", "Person", routeValues: null, htmlAttributes: new { title = "Person", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Dirección", "Index", "Address", routeValues: null, htmlAttributes: new { title = "Address", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Departamento", "Index", "Department", routeValues: null, htmlAttributes: new { title = "Department", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Bodega", "Index", "Warehouse", routeValues: null, htmlAttributes: new { title = "Warehouse", @class = "nav-link" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Envio", "Index", "Delivery", routeValues: null, htmlAttributes: new { title = "Delivery", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Estado de Envio", "Index", "DeliveryState", routeValues: null, htmlAttributes: new { title = "DeliveryState", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Historial", "Index", "History", routeValues: null, htmlAttributes: new { title = "History", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Oficina", "Index", "Office", routeValues: null, htmlAttributes: new { title = "Office", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Paquete", "Index", "Package", routeValues: null, htmlAttributes: new { title = "Package", @class = "nav-link" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Municipio", "Index", "Town", routeValues: null, htmlAttributes: new { title = "Town", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Tipo de Transporte", "Index", "TransportType", routeValues: null, htmlAttributes: new { title = "TransportType", @class = "nav-link" })
+            </td>
+            <td>
+                @Html.ActionLink("Vehiculo", "Index", "Vehicle", routeValues: null, htmlAttributes: new { title = "Vehicle", @class = "nav-link" })
+            </td>
+        </tr>
+    </tbody>
+</table>

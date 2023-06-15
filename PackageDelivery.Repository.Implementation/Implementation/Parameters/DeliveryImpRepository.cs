@@ -24,6 +24,8 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                 envio dt = mapper.DBModelToDatabaseMapper(record);
                 db.envio.Add(dt);
                 db.SaveChanges();
+                dt.tipoTransporte = new tipoTransporte { nombre = record.TrasportTypeName };
+                dt.estadoEnvio = new estadoEnvio { nombre = record.DeliveryStateName };
                 return mapper.DatabaseToDBModelMapper(dt);
             }
         }
@@ -83,7 +85,7 @@ namespace PackageDelivery.Repository.Implementation.Parameters
         {
             using (MensajeriaDBEntities db = new MensajeriaDBEntities())
             {
-                IEnumerable<envio> list = db.envio.Where(x => x.id == filter);
+                IEnumerable<envio> list = db.envio.Where(x => x.id >= filter);
                 DeliveryRepositoryMapper mapper = new DeliveryRepositoryMapper();
                 return mapper.DatabaseToDBModelMapper(list);
             }
