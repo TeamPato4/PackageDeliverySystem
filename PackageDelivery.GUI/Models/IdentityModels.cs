@@ -28,7 +28,9 @@ namespace PackageDelivery.GUI.Models
         {
             return new ApplicationDbContext();
         }
-
+        
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.TransportTypeModel> TransportTypeModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.VehicleModel> VehicleModels { get; set; }
         public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.TownModel> TownModels { get; set; }
         public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.OfficeModel> OfficeModels { get; set; }
         public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.PackageModel> PackageModels { get; set; }
@@ -38,4 +40,5 @@ namespace PackageDelivery.GUI.Models
         public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.PersonModel> PersonModels { get; set; }
         public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.WarehouseModel> WarehouseModels { get; set; }
     }
+    
 }

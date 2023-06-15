@@ -192,6 +192,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Parameters\TransportTypeController.cs" />
+    <Compile Include="Controllers\Parameters\VehicleController.cs" />
     <Compile Include="Controllers\Parameters\OfficeController.cs" />
     <Compile Include="Controllers\Parameters\PackageController.cs" />
     <Compile Include="Controllers\Parameters\TownController.cs" />
@@ -348,6 +350,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TransportType\Create.cshtml" />
+    <Content Include="Views\Vehicle\Create.cshtml" />
+    <Content Include="Views\Vehicle\Delete.cshtml" />
+    <Content Include="Views\TransportType\Delete.cshtml" />
+    <Content Include="Views\TransportType\Details.cshtml" />
+    <Content Include="Views\Vehicle\Details.cshtml" />
+    <Content Include="Views\TransportType\Edit.cshtml" />
+    <Content Include="Views\Vehicle\Edit.cshtml" />
+    <Content Include="Views\Vehicle\Index.cshtml" />
+    <Content Include="Views\TransportType\Index.cshtml" />
     <Content Include="Views\Town\Create.cshtml" />
     <Content Include="Views\Town\Delete.cshtml" />
     <Content Include="Views\Town\Details.cshtml" />

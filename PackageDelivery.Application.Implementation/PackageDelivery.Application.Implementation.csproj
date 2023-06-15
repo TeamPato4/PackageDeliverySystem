@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\Parameters\TransportTypeApplication.cs" />
+    <Compile Include="Implementation\Parameters\VehicleApplication.cs" />
     <Compile Include="Implementation\Parameters\OfficeImpApplication.cs" />
     <Compile Include="Implementation\Parameters\PackageImpApplication.cs" />
     <Compile Include="Implementation\Parameters\TownImpApplication.cs" />
@@ -48,7 +50,6 @@
     <Compile Include="Implementation\Parameters\DepartmentImpApplication.cs" />
     <Compile Include="Implementation\Parameters\DocumentTypeImpApplication.cs" />
     <Compile Include="Implementation\Parameters\PersonImpApplication.cs" />
-    <Compile Include="Implementation\Parameters\WarehouseImpApplication.cs" />
     <Compile Include="Mappers\DTOMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryApplicationMapper.cs" />
