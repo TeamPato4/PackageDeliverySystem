@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace PackageDelivery.GUI.Models.Parameters
@@ -36,5 +37,13 @@ namespace PackageDelivery.GUI.Models.Parameters
         [Required]
         [DisplayName("Tipo de documento")]
         public int IdentificationType { get; set; }
+
+        [DisplayName("Tipo de documento")]
+        public string DocumentTypeName { get; set; }
+
+        [DisplayName("Tipo de documento")]
+        public IEnumerable<DocumentTypeModel> DocumentTypeList { get; set; }
+
+        public string FullName { get; set; }
     }
 }

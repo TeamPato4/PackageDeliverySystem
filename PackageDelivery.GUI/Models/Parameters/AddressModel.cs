@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -37,5 +38,19 @@ namespace PackageDelivery.GUI.Models.Parameters
         [Required]
         [DisplayName("Persona")]
         public long IdPerson { get; set; }
+
+        [DisplayName("Municipio")]
+        public string TownName { get; set; }
+
+        [DisplayName("Municipio")]
+        public IEnumerable<TownModel> TownList { get; set; }
+
+        [Required]
+        [DisplayName("Persona")]
+        public string PersonName { get; set; }
+
+        [Required]
+        [DisplayName("Persona")]
+        public IEnumerable<PersonModel> PersonList { get; set; }
     }
 }

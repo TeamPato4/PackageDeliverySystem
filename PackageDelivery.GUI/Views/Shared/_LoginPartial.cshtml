@@ -5,12 +5,27 @@
     {
     @Html.AntiForgeryToken()
 
-    <ul class="navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class="nav-link" })
-        </li>
-        <li><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
-    </ul>
+<ul class="navbar-nav navbar-right">
+    <li>
+        @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "nav-link" })
+    </li>
+    <li>
+        @Html.ActionLink("Tipo de Documento", "Index", "DocumentType", routeValues: null, htmlAttributes: new { title = "DocumentType", @class = "nav-link" })
+    </li>
+    <li>
+        @Html.ActionLink("Persona", "Index", "Person", routeValues: null, htmlAttributes: new { title = "Person", @class = "nav-link" })
+    </li>
+    <li>
+        @Html.ActionLink("Dirección", "Index", "Address", routeValues: null, htmlAttributes: new { title = "Address", @class = "nav-link" })
+    </li>
+    <li>
+        @Html.ActionLink("Departamento", "Index", "Department", routeValues: null, htmlAttributes: new { title = "Department", @class = "nav-link" })
+    </li>
+    <li>
+        @Html.ActionLink("Bodega", "Index", "Warehouse", routeValues: null, htmlAttributes: new { title = "Warehouse", @class = "nav-link" })
+    </li>
+    <li><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
+</ul>
     }
 }
 else

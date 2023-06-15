@@ -23,9 +23,20 @@
                     <li>@Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
-                 @Html.Partial("_LoginPartial")
-            </dixv>
-        </div>
+                @if (@ViewBag.ClassName != null)
+                {
+                    <div id="divMessageId" class="divMessage @ViewBag.ClassName">
+                        <strong>@ViewBag.Message</strong>
+                    </div>
+                    <script type="text/javascript">setTimeout(function () {
+                            //alert("")
+                            //document.querySelector("#divMessageId").style.display = "none";
+                            $("#divMessageId").hide(    );
+                        }, 3000);</script>
+                }
+                @Html.Partial("_LoginPartial")
+                </dixv>
+            </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
