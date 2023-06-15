@@ -11,8 +11,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             return new VehicleModel
             {
                 Id = input.Id,
-                Plate = input.Plate,
+                Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
+                TransportTypeName = input.TrasportTypeName
             };
         }
 
@@ -31,7 +32,7 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             return new VehicleDTO
             {
                 Id = input.Id,
-                Plate = input.Plate,
+                Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
             };
         }

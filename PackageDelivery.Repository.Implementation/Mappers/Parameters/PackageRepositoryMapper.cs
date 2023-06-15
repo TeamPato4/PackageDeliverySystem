@@ -15,7 +15,8 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Height = input.altura,
                 Depth = input.profundidad,
                 Width = input.ancho,
-                IdOffice = input.idOficina
+                IdOffice = input.idOficina,
+                OfficeName = input.oficina.nombre
             };
         }
 

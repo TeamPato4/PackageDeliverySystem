@@ -11,8 +11,9 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
             return new VehicleDBModel
             {
                 Id = input.id,
-                Plate = input.placa,
+                Placa = input.placa,
                 IdTransportType = input.idTipoTransporte,
+                TrasportTypeName = input.tipoTransporte.nombre
             };
         }
 
@@ -31,7 +32,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
             return new vehiculo
             {
                 id = input.Id,
-                placa = input.Plate,
+                placa = input.Placa,
                 idTipoTransporte = input.IdTransportType,
             };
         }

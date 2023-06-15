@@ -11,11 +11,11 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             return new VehicleDTO
             {
                 Id = input.Id,
-                Plate = input.Plate,
+                Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
+                TrasportTypeName = input.TrasportTypeName,
             };
         }
-
         public override IEnumerable<VehicleDTO> DBModelToDTOMapper(IEnumerable<VehicleDBModel> input)
         {
             IList<VehicleDTO> list = new List<VehicleDTO>();
@@ -31,7 +31,7 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
             return new VehicleDBModel
             {
                 Id = input.Id,
-                Plate = input.Plate,
+                Placa = input.Placa,
                 IdTransportType = input.IdTransportType,
             };
         }

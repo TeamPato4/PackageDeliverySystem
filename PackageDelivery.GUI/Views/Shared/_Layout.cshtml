@@ -1,18 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
         <div class="container">
-            @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <a href="https://ibb.co/kMJBvSf"><img src="https://i.ibb.co/kMJBvSf/imagen-2023-06-15-012027421-removebg-preview.png" alt="imagen-2023-06-15-012027421-removebg-preview" border="0" width="60" height="60"></a>
+            @Html.ActionLink("ExpressEnvíos", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,15 +24,31 @@
                     <li>@Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
-                 @Html.Partial("_LoginPartial")
-            </dixv>
-        </div>
+                @if (@ViewBag.ClassName != null)
+                {
+                    <div id="divMessageId" class="divMessage @ViewBag.ClassName">
+                        <strong>@ViewBag.Message</strong>
+                    </div>
+                    <script type="text/javascript">setTimeout(function () {
+                            //alert("")
+                            //document.querySelector("#divMessageId").style.display = "none";
+                            $("#divMessageId").hide(    );
+                        }, 3000);</script>
+                }
+                @Html.Partial("_LoginPartial")
+                </div>
+            </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>
+                &copy; @DateTime.Now.Year - Albert Muñoz
+                - Julián Flórez -
+                Luis Patiño -
+                Miguel Restrepo
+            </p>
         </footer>
     </div>
 

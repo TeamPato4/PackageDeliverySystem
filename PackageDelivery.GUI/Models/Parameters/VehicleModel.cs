@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -9,10 +10,16 @@ namespace PackageDelivery.GUI.Models.Parameters
 
         [Required]
         [DisplayName("Placa")]
-        public string Plate { get; set; }
+        public string Placa { get; set; }
 
         [Required]
         [DisplayName("Tipo de transporte")]
         public long? IdTransportType { get; set; }
+
+        [DisplayName("Tipo de transporte")]
+        public string TransportTypeName { get; set; }
+
+        [DisplayName("Tipo de transporte")]
+        public IEnumerable<TransportTypeModel> TransportTypeList { get; set; }
     }
 }

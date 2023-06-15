@@ -15,7 +15,8 @@ namespace PackageDelivery.GUI.Mappers.Parameters
                 DepartureDate = input.DepartureDate,
                 Description = input.Description,
                 IdPackage = input.IdPackage,
-                IdWarehouse = input.IdWarehouse
+                IdWarehouse = input.IdWarehouse,
+                WarehouseName = input.WarehouseName,
             };
         }
 

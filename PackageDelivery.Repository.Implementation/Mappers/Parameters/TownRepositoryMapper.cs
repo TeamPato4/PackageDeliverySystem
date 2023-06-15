@@ -13,6 +13,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Id = input.id,
                 Name = input.nombre,
                 IdDepartment = input.idDepartamento,
+                DepartmentName = input.departamento.nombre
             };
         }
 

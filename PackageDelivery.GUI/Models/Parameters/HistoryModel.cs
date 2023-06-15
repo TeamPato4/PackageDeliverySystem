@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -24,5 +25,11 @@ namespace PackageDelivery.GUI.Models.Parameters
 
         [DisplayName("Bodega")]
         public long? IdWarehouse { get; set; }
+
+        [DisplayName("Bodega")]
+        public string WarehouseName { get; set; }
+
+        [DisplayName("Bodega")]
+        public IEnumerable<WarehouseModel> WarehouseList { get; set; }
     }
 }

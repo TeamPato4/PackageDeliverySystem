@@ -17,7 +17,10 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 IdAddressDestination = input.idDireccionDestino,
                 IdPackage = input.idPaquete,
                 IdDeliveryState = input.idEstado,
-                IdTransportType = input.idTipoTransporte
+                IdTransportType = input.idTipoTransporte,
+                DeliveryStateName = input.estadoEnvio.nombre,
+                TrasportTypeName = input.tipoTransporte.nombre
+
             };
         }
 
