@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Mappers.Parameters
 {
-    public class AddressGUIMapper : ModelMapperBase<AddressModel, AddresDTO>
+    public class AddressGUIMapper : ModelMapperBase<AddressModel, AddressDTO>
     {
-        public override AddressModel DTOToModelMapper(AddresDTO input)
+        public override AddressModel DTOToModelMapper(AddressDTO input)
         {
             return new AddressModel()
             {
@@ -18,11 +18,13 @@ namespace PackageDelivery.GUI.Mappers.Parameters
                 Observations = input.Observations,
                 Current = input.Current,
                 IdTown = input.IdTown,
-                IdPerson = input.IdPerson
+                IdPerson = input.IdPerson,
+                TownName = input.TownName,
+                PersonName = input.PersonName,
             };
         }
 
-        public override IEnumerable<AddressModel> DTOToModelMapper(IEnumerable<AddresDTO> input)
+        public override IEnumerable<AddressModel> DTOToModelMapper(IEnumerable<AddressDTO> input)
         {
             IList<AddressModel> list = new List<AddressModel>();
             foreach (var item in input)
@@ -32,9 +34,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             return list;
         }
 
-        public override AddresDTO ModelToDTOMapper(AddressModel input)
+        public override AddressDTO ModelToDTOMapper(AddressModel input)
         {
-            return new AddresDTO
+            return new AddressDTO
             {
                 Id = input.Id,
                 StreetType = input.StreetType,
@@ -48,9 +50,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
             };
         }
 
-        public override IEnumerable<AddresDTO> ModelToDTOMapper(IEnumerable<AddressModel> input)
+        public override IEnumerable<AddressDTO> ModelToDTOMapper(IEnumerable<AddressModel> input)
         {
-            IList<AddresDTO> list = new List<AddresDTO>();
+            IList<AddressDTO> list = new List<AddressDTO>();
             foreach (var item in input)
             {
                 list.Add(this.ModelToDTOMapper(item));

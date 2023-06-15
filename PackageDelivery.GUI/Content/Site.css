@@ -1,4 +1,16 @@
-﻿/* Set padding to keep content from hitting the edges */
+﻿﻿.success-action {
+    background: green;
+}
+
+.warning-action {
+    background: orange;
+}
+
+.divMessage {
+    width: 100%;
+}
+
+/* Set padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
     padding-left: 15px;

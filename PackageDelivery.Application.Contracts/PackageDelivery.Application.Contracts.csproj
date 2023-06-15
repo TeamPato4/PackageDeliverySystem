@@ -57,6 +57,11 @@
     <Compile Include="Interfaces\Parameters\IOfficeApplication.cs" />
     <Compile Include="Interfaces\Parameters\IPackageApplication.cs" />
     <Compile Include="Interfaces\Parameters\ITownApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IAddressApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IDepartmentApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IDocumentTypeApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IPersonApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IWarehouseApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

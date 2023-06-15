@@ -9,5 +9,6 @@
         public string Latitude { get; set; }
         public string Longitude { get; set; }
         public long IdTown { get; set; }
+        public string TownName { get; set; }
     }
 }

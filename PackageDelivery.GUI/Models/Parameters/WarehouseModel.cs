@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Models.Parameters
 {
@@ -30,5 +31,13 @@ namespace PackageDelivery.GUI.Models.Parameters
         [Required]
         [DisplayName("Municipio")]
         public long IdTown { get; set; }
+
+        [Required]
+        [DisplayName("Municipio")]
+        public string TownName { get; set; }
+
+        [Required]
+        [DisplayName("Municipio")]
+        public IEnumerable<TownModel> TownList { get; set; }
     }
 }

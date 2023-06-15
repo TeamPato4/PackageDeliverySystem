@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.Application.Implementation.Mappers.Parameters
 {
-    public class PersonApplicationapper : DTOMapperBase<PersonDTO, PersonDBModel>
+    public class PersonApplicationMapper : DTOMapperBase<PersonDTO, PersonDBModel>
     {
         public override PersonDTO DBModelToDTOMapper(PersonDBModel input)
         {
@@ -18,7 +18,8 @@ namespace PackageDelivery.Application.Implementation.Mappers.Parameters
                 IdentificationType = input.IdentificationType,
                 IdentificationNumber = input.IdentificationNumber,
                 Cellphone = input.Cellphone,
-                Email = input.Email
+                Email = input.Email,
+                DocumentTypeName = input.DocumentTypeName,
             };
         }
 
