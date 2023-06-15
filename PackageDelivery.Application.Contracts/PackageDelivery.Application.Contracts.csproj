@@ -54,6 +54,9 @@
     <Compile Include="DTOs\Parameters\TransportTypeDTO.cs" />
     <Compile Include="DTOs\Parameters\VehicleDTO.cs" />
     <Compile Include="DTOs\Parameters\WarehouseDTO.cs" />
+    <Compile Include="Interfaces\Parameters\IOfficeApplication.cs" />
+    <Compile Include="Interfaces\Parameters\IPackageApplication.cs" />
+    <Compile Include="Interfaces\Parameters\ITownApplication.cs" />
     <Compile Include="Interfaces\Parameters\IAddressApplication.cs" />
     <Compile Include="Interfaces\Parameters\IDepartmentApplication.cs" />
     <Compile Include="Interfaces\Parameters\IDocumentTypeApplication.cs" />

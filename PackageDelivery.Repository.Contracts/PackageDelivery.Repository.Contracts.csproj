@@ -54,6 +54,9 @@
     <Compile Include="DBModels\Parameters\TransportTypeDBModel.cs" />
     <Compile Include="DBModels\Parameters\VehicleDBModel.cs" />
     <Compile Include="DBModels\Parameters\WarehouseDBModel.cs" />
+    <Compile Include="Interfaces\Parameters\IOfficeRepository.cs" />
+    <Compile Include="Interfaces\Parameters\IPackageRepository.cs" />
+    <Compile Include="Interfaces\Parameters\ITownRepository.cs" />
     <Compile Include="Interfaces\Parameters\IAddressRepository.cs" />
     <Compile Include="Interfaces\Parameters\IDepartmentRepository.cs" />
     <Compile Include="Interfaces\Parameters\IDocumentTypeRepository.cs" />

@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\Parameters\OfficeImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\PackageImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\TownImpApplication.cs" />
     <Compile Include="Implementation\Parameters\AddressImpApplication.cs" />
     <Compile Include="Implementation\Parameters\DepartmentImpApplication.cs" />
     <Compile Include="Implementation\Parameters\DocumentTypeImpApplication.cs" />
