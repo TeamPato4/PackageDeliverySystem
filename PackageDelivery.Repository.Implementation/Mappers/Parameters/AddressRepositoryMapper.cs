@@ -18,7 +18,9 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 Observations = input.observaciones,
                 Current = input.actual,
                 IdTown = input.idMunicipio,
-                IdPerson = input.idPersona
+                IdPerson = input.idPersona,
+                TownName = input.municipio.nombre,
+                PersonName = input.persona1.primerNombre,
             };
         }
 
@@ -37,11 +39,11 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
             return new direccion
             {
                 id = input.Id,
-                tipoCalle = input.StreetType,
-                numero = input.Number,
-                tipoInmueble = input.PropertyType,
+                tipoCalle = input.StreetType.Trim(),
+                numero = input.Number.Trim(),
+                tipoInmueble = input.PropertyType.Trim(),
                 barrio = input.Neighborhood,
-                observaciones = input.Observations,
+                observaciones = input.Observations.Trim(),
                 actual = input.Current,
                 idMunicipio = input.IdTown,
                 idPersona = input.IdPerson

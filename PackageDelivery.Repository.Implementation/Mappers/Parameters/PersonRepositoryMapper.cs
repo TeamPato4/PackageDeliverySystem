@@ -1,10 +1,6 @@
 ﻿using PackageDelivery.Repository.DBModels.Parameters;
 using PackageDelivery.Repository.Implementation.DataModel;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
 {
@@ -23,6 +19,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 IdentificationNumber = input.documento,
                 Cellphone = input.telefono,
                 Email = input.correo,
+                DocumentTypeName = input.tipoDocumento1.nombre,
             };
         }
 
@@ -41,14 +38,14 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
             return new persona
             {
                 id = input.Id,
-                primerNombre = input.FirstName,
-                otrosNombres = input.OtherNames,
-                primerApellido = input.FirstLastname,
-                segundoApellido = input.SecondLastname,
+                primerNombre = input.FirstName.Trim(),
+                otrosNombres = input.OtherNames.Trim(),
+                primerApellido = input.FirstLastname.Trim(),
+                segundoApellido = input.SecondLastname.Trim(),
                 idTipoDocumento = input.IdentificationType,
-                documento = input.IdentificationNumber,
-                telefono = input.Cellphone,
-                correo = input.Email,
+                documento = input.IdentificationNumber.Trim(),
+                telefono = input.Cellphone.Trim(),
+                correo = input.Email.Trim(),
             };
         }
 

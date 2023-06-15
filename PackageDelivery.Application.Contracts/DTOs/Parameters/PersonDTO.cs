@@ -11,5 +11,6 @@
         public string Cellphone { get; set; }
         public string Email { get; set; }
         public int IdentificationType { get; set; }
+        public string DocumentTypeName { get; set; }
     }
 }

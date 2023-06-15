@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PackageDelivery.GUI.Mappers.Parameters
 {
-    public class PersonGUIapper : ModelMapperBase<PersonModel, PersonDTO>
+    public class PersonGUIMapper : ModelMapperBase<PersonModel, PersonDTO>
     {
         public override PersonModel DTOToModelMapper(PersonDTO input)
         {
@@ -18,7 +18,9 @@ namespace PackageDelivery.GUI.Mappers.Parameters
                 IdentificationType = input.IdentificationType,
                 IdentificationNumber = input.IdentificationNumber,
                 Cellphone = input.Cellphone,
-                Email = input.Email
+                Email = input.Email,
+                DocumentTypeName = input.DocumentTypeName,
+                FullName = input.FirstName + " " + input.FirstLastname, 
             };
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace PackageDelivery.Application.DTOs.Parameters
 {
-    public class AddresDTO
+    public class AddressDTO
     {
         public long Id { get; set; }
         public string StreetType { get; set; }
@@ -11,5 +11,7 @@
         public bool Current { get; set; }
         public long? IdTown { get; set; }
         public long IdPerson { get; set; }
+        public string TownName { get; set; }
+        public string PersonName { get; set; }
     }
 }
