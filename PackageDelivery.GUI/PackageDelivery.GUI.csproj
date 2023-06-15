@@ -171,12 +171,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OfficeController.cs" />
-    <Compile Include="Controllers\PackageController.cs" />
-    <Compile Include="Controllers\TownController.cs" />
+    <Compile Include="Controllers\Parameters\OfficeController.cs" />
+    <Compile Include="Controllers\Parameters\PackageController.cs" />
+    <Compile Include="Controllers\Parameters\TownController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ActionMessages.cs" />
     <Compile Include="Mappers\ModelMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressGUIMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryGUIMapper.cs" />
@@ -331,6 +332,10 @@
     <ProjectReference Include="..\PackageDelivery.Application.Contracts\PackageDelivery.Application.Contracts.csproj">
       <Project>{cbb1b15d-ff90-44e4-84ae-e645d5d514ec}</Project>
       <Name>PackageDelivery.Application.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PackageDelivery.Application.Implementation\PackageDelivery.Application.Implementation.csproj">
+      <Project>{0c2965ca-e4b6-4393-a6aa-21f64d2b0bca}</Project>
+      <Name>PackageDelivery.Application.Implementation</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -94,11 +94,6 @@ namespace PackageDelivery.Repository.Implementation.Parameters
             }
         }
 
-        public IEnumerable<DocumentTypeDBModel> getRecordsList(string filter)
-        {
-            throw new NotImplementedException();
-        }
-
         public PackageDBModel updateRecord(PackageDBModel record)
         {
             using (MensajeriaDBEntities db = new MensajeriaDBEntities())
@@ -126,9 +121,5 @@ namespace PackageDelivery.Repository.Implementation.Parameters
             throw new NotImplementedException();
         }
 
-        DocumentTypeDBModel IPackageRepository.getRecordById(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

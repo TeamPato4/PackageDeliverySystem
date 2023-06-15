@@ -15,7 +15,7 @@ namespace PackageDelivery.GUI.Controllers.Parameters
         private IPackageApplication _app = new PackageImpApplication();
 
         // GET: Package
-        public ActionResult Index(string filter = "")
+        public ActionResult Index(long filter = 0)
         {
             PackageGUIMapper mapper = new PackageGUIMapper();
             IEnumerable<PackageModel> list = mapper.DTOToModelMapper(_app.getRecordsList(filter));

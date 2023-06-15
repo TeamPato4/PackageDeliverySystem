@@ -107,6 +107,9 @@
     <Compile Include="DataModel\vehiculo.cs">
       <DependentUpon>PackageDeliveryDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\Parameters\OfficeImpRepository.cs" />
+    <Compile Include="Implementation\Parameters\PackageImpRepository.cs" />
+    <Compile Include="Implementation\Parameters\TownImpRepository.cs" />
     <Compile Include="Mappers\DBModelMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressRepositoryMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryRepositoryMapper.cs" />
@@ -136,9 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PackageDelivery.Repository.Contracts\PackageDelivery.Repository.Contracts.csproj">

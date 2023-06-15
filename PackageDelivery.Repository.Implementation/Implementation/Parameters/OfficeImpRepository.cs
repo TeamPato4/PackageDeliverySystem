@@ -28,11 +28,6 @@ namespace PackageDelivery.Repository.Implementation.Parameters
             }
         }
 
-        public DocumentTypeDBModel createRecord(DocumentTypeDBModel record)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Eliminación de un registro en la base de datos por Id
         /// </summary>
@@ -114,21 +109,6 @@ namespace PackageDelivery.Repository.Implementation.Parameters
                     return mapper.DatabaseToDBModelMapper(td);
                 }
             }
-        }
-
-        public DocumentTypeDBModel updateRecord(DocumentTypeDBModel record)
-        {
-            throw new NotImplementedException();
-        }
-
-        DocumentTypeDBModel IOfficeRepository.getRecordById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<DocumentTypeDBModel> IOfficeRepository.getRecordsList(string filter)
-        {
-            throw new NotImplementedException();
         }
     }
 }

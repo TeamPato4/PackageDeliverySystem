@@ -5,10 +5,10 @@ namespace PackageDelivery.Repository.Contracts.Interfaces.Parameters
 {
     public interface IPackageRepository
     {
-        DocumentTypeDBModel getRecordById(int id);
-        IEnumerable<DocumentTypeDBModel> getRecordsList(string filter);
-        DocumentTypeDBModel createRecord(DocumentTypeDBModel record);
-        DocumentTypeDBModel updateRecord(DocumentTypeDBModel record);
+        PackageDBModel getRecordById(int id);
+        IEnumerable<PackageDBModel> getRecordsList(long filter);
+        PackageDBModel createRecord(PackageDBModel record);
+        PackageDBModel updateRecord(PackageDBModel record);
         bool deleteRecordById(int id);
     }
 }

@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-namespace TownDelivery.Repository.Implementation.Parameters
+namespace PackageDelivery.Repository.Implementation.Parameters
 {
     public class TownImpRepository : ITownRepository
     {
@@ -120,14 +120,5 @@ namespace TownDelivery.Repository.Implementation.Parameters
             throw new NotImplementedException();
         }
 
-        DocumentTypeDBModel ITownRepository.getRecordById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<DocumentTypeDBModel> ITownRepository.getRecordsList(string filter)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
