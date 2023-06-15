@@ -50,6 +50,7 @@
     <Compile Include="Implementation\Parameters\DepartmentImpApplication.cs" />
     <Compile Include="Implementation\Parameters\DocumentTypeImpApplication.cs" />
     <Compile Include="Implementation\Parameters\PersonImpApplication.cs" />
+    <Compile Include="Implementation\Parameters\WarehouseImpApplication.cs" />
     <Compile Include="Mappers\DTOMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressApplicationMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryApplicationMapper.cs" />

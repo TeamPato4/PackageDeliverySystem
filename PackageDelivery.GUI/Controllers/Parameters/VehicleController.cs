@@ -2,10 +2,6 @@
 using PackageDelivery.Application.DTOs.Parameters;
 using PackageDelivery.Application.Implementation.Implementation.Parameters;
 using PackageDelivery.GUI.Mappers.Parameters;
-using PackageDelivery.Application.Contracts.Interfaces.Parameters;
-using PackageDelivery.Application.DTOs.Parameters;
-using PackageDelivery.Application.Implementation.Implementation.Parameters;
-using PackageDelivery.GUI.Mappers.Parameters;
 using PackageDelivery.GUI.Models.Parameters;
 using System.Collections.Generic;
 using System.Net;
