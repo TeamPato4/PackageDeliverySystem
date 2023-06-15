@@ -28,6 +28,8 @@ namespace PackageDelivery.GUI.Models
         {
             return new ApplicationDbContext();
         }
-    public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.DocumentTypeModel> DocumentTypeModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.DeliveryModel> DeliveryModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.DeliveryStateModel> DeliveryStateModels { get; set; }
+        public System.Data.Entity.DbSet<PackageDelivery.GUI.Models.Parameters.HistoryModel> HistoryModels { get; set; }
     }
 }

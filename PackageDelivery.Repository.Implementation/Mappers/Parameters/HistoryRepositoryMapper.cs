@@ -36,7 +36,7 @@ namespace PackageDelivery.Repository.Implementation.Mappers.Parameters
                 id = input.Id,
                 fechaIngreso = input.AdmissionDate,
                 fechaSalida = input.DepartureDate,
-                descripcion = input.Description,
+                descripcion = input.Description.Trim(),
                 idPaquete = input.IdPackage,
                 idBodega = input.IdWarehouse
             };

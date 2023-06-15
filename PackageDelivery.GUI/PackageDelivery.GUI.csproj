@@ -171,9 +171,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Parameters\DeliveryController.cs" />
+    <Compile Include="Controllers\Parameters\DeliveryStateController.cs" />
+    <Compile Include="Controllers\Parameters\HistoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ActionMessages.cs" />
     <Compile Include="Mappers\ModelMapperBase.cs" />
     <Compile Include="Mappers\Parameters\AddressGUIMapper.cs" />
     <Compile Include="Mappers\Parameters\DeliveryGUIMapper.cs" />
@@ -278,10 +282,24 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\History\Create.cshtml" />
+    <Content Include="Views\History\Delete.cshtml" />
+    <Content Include="Views\History\Details.cshtml" />
+    <Content Include="Views\History\Edit.cshtml" />
+    <Content Include="Views\History\Index.cshtml" />
+    <Content Include="Views\DeliveryState\Create.cshtml" />
+    <Content Include="Views\DeliveryState\Delete.cshtml" />
+    <Content Include="Views\DeliveryState\Details.cshtml" />
+    <Content Include="Views\DeliveryState\Edit.cshtml" />
+    <Content Include="Views\DeliveryState\Index.cshtml" />
+    <Content Include="Views\Delivery\Create.cshtml" />
+    <Content Include="Views\Delivery\Delete.cshtml" />
+    <Content Include="Views\Delivery\Details.cshtml" />
+    <Content Include="Views\Delivery\Edit.cshtml" />
+    <Content Include="Views\Delivery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Parameters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -314,6 +332,10 @@
     <ProjectReference Include="..\PackageDelivery.Application.Contracts\PackageDelivery.Application.Contracts.csproj">
       <Project>{cbb1b15d-ff90-44e4-84ae-e645d5d514ec}</Project>
       <Name>PackageDelivery.Application.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PackageDelivery.Application.Implementation\PackageDelivery.Application.Implementation.csproj">
+      <Project>{0c2965ca-e4b6-4393-a6aa-21f64d2b0bca}</Project>
+      <Name>PackageDelivery.Application.Implementation</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
